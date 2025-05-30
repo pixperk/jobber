@@ -15,6 +15,10 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "libs"
+  },
   "nxCloudId": "6836be1a67dd535e0d084658",
   "plugins": [
     {
@@ -38,7 +42,12 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/jobber-auth-e2e/**/*"]
+      "exclude": [
+        "apps/jobber-auth-e2e/**/*",
+        "jobber-jobs-e2e/**/*",
+        "jobber-jobs-e2e/**/*",
+        "apps/jobber-jobs-e2e/**/*"
+      ]
     }
   ]
 }
