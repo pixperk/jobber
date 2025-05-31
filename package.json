@@ -3,7 +3,18 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "proto:gen": "npx protoc --ts_proto_out=./types --ts_proto_opt=nestJs=true --proto_path=./proto ./proto/*.proto",
     "prepare": "husky"
+  },
+  "nx": {
+    "targets": {
+      "proto:gen": {
+        "inputs": [
+          "{workspaceRoot}/proto/*.proto"
+        ],
+        "cache": true
+      }
+    }
   },
   "private": true,
   "dependencies": {
